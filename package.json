@@ -11,6 +11,10 @@
     "web:dev": "npm --workspace apps/web run dev",
     "api:dev": "npm --workspace apps/api run start:dev",
     "bot:dev": "npm --workspace apps/bot run dev",
+    "api:seed": "cd apps/api && npx ts-node src/scripts/seed.ts",
     "lint": "npm run lint --workspaces"
+  },
+  "devDependencies": {
+    "supabase": "^2.58.5"
   }
 }
