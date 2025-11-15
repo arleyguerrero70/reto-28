@@ -7,6 +7,7 @@ import { SupabaseModule } from './supabase/supabase.module';
 import { UsersModule } from './users/users.module';
 import { ChallengesModule } from './challenges/challenges.module';
 import { AuthModule } from './auth/auth.module';
+import { DailyLogsModule } from './daily-logs/daily-logs.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { AuthModule } from './auth/auth.module';
     UsersModule,
     ChallengesModule,
     AuthModule,
+    DailyLogsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
