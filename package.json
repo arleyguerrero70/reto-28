@@ -1,0 +1,16 @@
+{
+  "name": "reto-28",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Monorepo open source para el Reto 28 días",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "web:dev": "npm --workspace apps/web run dev",
+    "api:dev": "npm --workspace apps/api run start:dev",
+    "bot:dev": "npm --workspace apps/bot run dev",
+    "lint": "npm run lint --workspaces"
+  }
+}

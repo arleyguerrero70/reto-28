@@ -1,0 +1,29 @@
+# Logs
+tmp/
+*.log
+
+# Dependencies
+node_modules/
+apps/*/node_modules/
+
+# Build outputs
+dist/
+apps/*/dist/
+build/
+
+# Env files
+.env
+.env.*
+apps/*/.env
+apps/*/.env.*
+
+# Supabase
+.supabase
+
+# Editor
+.vscode/
+.DS_Store
+
+# Generated
+package-lock.json
+apps/*/package-lock.json
