@@ -18,6 +18,11 @@ export class UsersController {
     return this.usersService.findAll(paginationDto);
   }
 
+  @Get('telegram/:telegramId')
+  findByTelegramId(@Param('telegramId') telegramId: string) {
+    return this.usersService.findByTelegramId(telegramId);
+  }
+
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.usersService.findOne(id);

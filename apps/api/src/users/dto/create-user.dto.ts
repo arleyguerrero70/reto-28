@@ -20,4 +20,16 @@ export class CreateUserDto {
   @IsOptional()
   @IsString()
   expectation?: string;
+
+  @IsOptional()
+  @IsString()
+  emailContact?: string;
+
+  @IsOptional()
+  @IsString()
+  habitGoal?: string;
+
+  @IsOptional()
+  @IsString()
+  telegramUserId?: string;
 }
