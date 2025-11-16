@@ -18,6 +18,15 @@ Aplicación web open source para acompañar el reto de hábitos de 28 días. El 
 - `npm run bot:dev`: arranca el bot en modo desarrollo.
 - `npm run api:seed`: inserta un usuario y un reto demo en Supabase (requiere `SUPABASE_SERVICE_ROLE_KEY`).
 
+## Bot (apps/bot)
+- Requisitos: configurar `TELEGRAM_BOT_TOKEN`, `TELEGRAM_GROUP_ID` y `API_BASE_URL` en tu `.env`. El bot lee los secretos de la raíz del monorepo.
+- Características actuales:
+  - Comando `/start` con soporte para deep-link (payload en `ctx.match`).
+  - Comando `/registro` y botón inline (placeholder para formulario privado).
+  - Recordatorios automáticos en el grupo (`node-cron`) con horarios diferenciados entre semana (09:00/15:00/19:00) y fines de semana (10:00/18:00) usando la zona horaria `TZ`.
+  - Comando `/frase` que obtiene una frase motivacional basada en los mentores del usuario (consulta al backend).
+- Ejecuta `npm run bot:dev` para modo polling durante el desarrollo; en producción configura webhook y un worker para los jobs recurrentes.
+
 ## Backend (apps/api)
 - Configuración: copia `.env.example` a `.env` y rellena las claves de Supabase, Telegram y LangChain. El servidor expone un `GET /health` para validar la conexión con Supabase.
 - Módulos incluidos:
