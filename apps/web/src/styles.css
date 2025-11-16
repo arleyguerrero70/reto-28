@@ -1,0 +1,98 @@
+:root {
+  --bg: #0e0f13;
+  --fg: #e7ecf3;
+  --accent: #7dd3fc;
+  --muted: #a3a9b6;
+  --surface: #12151c;
+  --shadow-dark: #0a0b0f;
+  --shadow-light: #171a22;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, Apple Color Emoji, Segoe UI Emoji;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.app {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  position: sticky;
+  top: 0;
+  background: linear-gradient(180deg, rgba(18,21,28,0.95), rgba(18,21,28,0.6));
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #1b1f29;
+}
+.app-header h1 { margin: 0; font-size: 18px; }
+.app-header nav { display: flex; gap: 14px; }
+.app-header a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+.app-header a.active {
+  color: var(--fg);
+  background: var(--surface);
+  box-shadow: 6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light);
+}
+
+.app-main {
+  padding: 24px;
+  max-width: 920px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.card {
+  background: var(--surface);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 12px 12px 24px var(--shadow-dark), -12px -12px 24px var(--shadow-light);
+}
+.card h2 { margin-top: 0; }
+
+.form {
+  display: grid;
+  gap: 14px;
+  margin-top: 14px;
+}
+.form label {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.form input,
+.form textarea,
+.form button {
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  padding: 12px 14px;
+  color: var(--fg);
+  background: var(--surface);
+  box-shadow: inset 6px 6px 12px var(--shadow-dark), inset -6px -6px 12px var(--shadow-light);
+}
+.form textarea { min-height: 96px; resize: vertical; }
+.form button {
+  cursor: pointer;
+  background: linear-gradient(180deg, #1b2230, #171d29);
+  box-shadow: 6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light);
+}
+.notice {
+  margin-top: 12px;
+  color: var(--accent);
+}
+
+
