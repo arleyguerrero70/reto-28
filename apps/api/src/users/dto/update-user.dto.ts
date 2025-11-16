@@ -10,4 +10,16 @@ export class UpdateUserDto extends PartialType(CreateUserDto) {
   @IsOptional()
   @IsString()
   timezone?: string;
+
+  @IsOptional()
+  @IsString()
+  emailContact?: string;
+
+  @IsOptional()
+  @IsString()
+  telegramUserId?: string;
+
+  @IsOptional()
+  @IsString()
+  habitGoal?: string;
 }
